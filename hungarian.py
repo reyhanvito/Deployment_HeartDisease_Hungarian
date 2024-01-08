@@ -4,9 +4,7 @@ import pandas as pd
 import numpy as np
 import time
 import pickle
-import matplotlib.pyplot as plt
 import streamlit as st
-import seaborn as sns
 from imblearn.over_sampling import RandomOverSampler
 from sklearn.metrics import accuracy_score
 
@@ -282,25 +280,6 @@ with tab1:
     st.write("")
     st.subheader("Prediksi:")
     st.subheader(result)
-
-    # Grafik Countplot untuk Diagnosis Penyakit Jantung
-    st.header("Heart Disease Diagnosis Distribution")
-    fig, ax = plt.subplots()
-    sns.countplot(x='target', data=df_clean, ax=ax)
-    ax.set_xlabel('Diagnosis')
-    ax.set_ylabel('Count')
-    ax.set_title('Heart Disease Diagnosis')
-    st.pyplot(fig)
-
-    # Visualisasi korelasi antar fitur
-    st.header("Correlation Heatmap")
-    fig, ax = plt.subplots()
-    correlation_matrix = df_clean.corr()
-    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", ax=ax)
-    ax.set_title('Correlation Heatmap')
-    st.pyplot(fig)
-
-
 
 
 # Pada tab2 ("Multi-predict")
