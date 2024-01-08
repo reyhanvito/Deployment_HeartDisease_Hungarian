@@ -141,7 +141,7 @@ with tab1:
     st.sidebar.header("**User Input** Sidebar")
 
     # Menampilkan widget untuk menginputkan usia (age)
-    age = st.sidebar.number_input(label=":violet[**Age**]", min_value=df_final['age'].min(),
+    age = st.sidebar.number_input(label=":violet[**Umur**]", min_value=df_final['age'].min(),
                                 max_value=df_final['age'].max(), key="age")
     # Menampilkan informasi range nilai yang valid untuk usia
     st.sidebar.write(
@@ -149,17 +149,17 @@ with tab1:
     st.sidebar.write("")
 
     # Menampilkan widget untuk memilih jenis kelamin (sex)
-    sex_sb = st.sidebar.radio(label=":violet[**Sex**]", options=["Male", "Female"], key="sex")
+    sex_sb = st.sidebar.radio(label=":violet[**Jenis Kelamin**]", options=["Male", "Female"], key="sex")
     st.sidebar.write("")
 
     # Menampilkan widget untuk memilih jenis nyeri dada (chest pain type)
-    cp_sb = st.sidebar.selectbox(label=":violet[**Chest pain type**]",
+    cp_sb = st.sidebar.selectbox(label=":violet[**Tipe Nyeri Dada**]",
                                 options=["Typical angina", "Atypical angina", "Non-anginal pain", "Asymptomatic"], key="cp")
     st.sidebar.write("")
 
     # Menampilkan widget untuk menginputkan tekanan darah istirahat (trestbps)
     trestbps = st.sidebar.number_input(
-        label=":violet[**Resting blood pressure** (in mm Hg on admission to the hospital)]",
+        label=":violet[**Berapa tekanan darah istirahat Anda (dalam mm Hg) saat masuk rumah sakit?**]",
         min_value=df_final['trestbps'].min(), max_value=df_final['trestbps'].max(), key="trestbps")
     # Menampilkan informasi range nilai yang valid untuk tekanan darah istirahat
     st.sidebar.write(
@@ -168,7 +168,7 @@ with tab1:
 
     # Menampilkan widget untuk menginputkan kadar kolesterol (chol)
     chol = st.sidebar.number_input(
-        label=":violet[**Serum cholesterol** (in mg/dl)]",
+        label=":violet[**Berapa kadar kolesterol Anda?**]",
         min_value=df_final['chol'].min(), max_value=df_final['chol'].max(), key="chol")
     # Menampilkan informasi range nilai yang valid untuk kadar kolesterol
     st.sidebar.write(
@@ -176,16 +176,16 @@ with tab1:
     st.sidebar.write("")
 
     # Menampilkan widget untuk memilih apakah gula darah puasa > 120 mg/dl (fbs)
-    fbs_sb = st.sidebar.radio(label=":violet[**Fasting blood sugar > 120 mg/dl?**]", options=["False", "True"], key="fbs")
+    fbs_sb = st.sidebar.radio(label=":violet[**Apakah kadar gula darah puasa Anda lebih dari 120 mg/dL?**]", options=["False", "True"], key="fbs")
     st.sidebar.write("")
 
     # Menampilkan widget untuk memilih hasil elektrokardiografi saat istirahat (restecg)
-    restecg_sb = st.sidebar.radio(label=":violet[**Resting electrocardiographic results**]",
+    restecg_sb = st.sidebar.radio(label=":violet[**Hasil elektrokardiografi saat istirahat Anda?**]",
                                     options=["Normal", "Having ST-T wave abnormality", "Showing left ventricular hypertrophy"], key="restecg")
     st.sidebar.write("")
 
     # Menampilkan widget untuk menginputkan detak jantung maksimum yang dicapai (thalach)
-    thalach = st.sidebar.number_input(label=":violet[**Maximum heart rate achieved**]",
+    thalach = st.sidebar.number_input(label=":violet[**Berapa denyut jantung maksimal yang Anda capai?**]",
                                     min_value=df_final['thalach'].min(), max_value=df_final['thalach'].max(), key="thalach")
     # Menampilkan informasi range nilai yang valid untuk detak jantung maksimum
     st.sidebar.write(
@@ -193,11 +193,11 @@ with tab1:
     st.sidebar.write("")
 
     # Menampilkan widget untuk memilih apakah terjadi angina yang dipicu oleh olahraga (exang)
-    exang_sb = st.sidebar.radio(label=":violet[**Exercise induced angina?**]", options=["No", "Yes"], key="exang")
+    exang_sb = st.sidebar.radio(label=":violet[**Apakah Anda mengalami nyeri saat olahraga??**]", options=["No", "Yes"], key="exang")
     st.sidebar.write("")
 
     # Menampilkan widget untuk menginputkan depresi ST yang diinduksi oleh olahraga relatif terhadap istirahat (oldpeak)
-    oldpeak = st.sidebar.number_input(label=":violet[**ST depression induced by exercise relative to rest**]",
+    oldpeak = st.sidebar.number_input(label=":violet[**Depresi ST yang dipicu oleh olahraga relatif terhadap istirahat**]",
                                     min_value=df_final['oldpeak'].min(), max_value=df_final['oldpeak'].max(), key="oldpeak")
     # Menampilkan informasi range nilai yang valid untuk depresi ST
     st.sidebar.write(
