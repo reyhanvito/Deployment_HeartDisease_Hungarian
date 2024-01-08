@@ -9,7 +9,6 @@ import streamlit as st
 import seaborn as sns
 from imblearn.over_sampling import RandomOverSampler
 from sklearn.metrics import accuracy_score
-from streamlit_option_menu import option_menu
 
 # Membaca data dari file "hungarian.data"
 with open("data/hungarian.data", encoding='Latin1') as file:
